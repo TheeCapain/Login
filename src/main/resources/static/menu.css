@@ -1,0 +1,28 @@
+.navbar {
+    width: 100vw;
+    height: 60px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-bottom: 2px solid brown;
+}
+
+.menu li {
+    font-size: 24px;
+    float: left;
+    display: inline-block;
+    padding: 8px;
+}
+
+.menu li:hover {
+   background-color: gray;
+}
+
+.menu li:visited {
+    background-color: gray;
+    color: black;
+}
+
+.menu li:active{
+    background-color: antiquewhite;
+    color: darkred;
+}

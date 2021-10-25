@@ -1,0 +1,83 @@
+@import "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css";
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, serif;
+    background-image: url("_DSC0018.NEF.jpg");
+    background-size: cover;
+}
+
+@media body and (min-width: 600px){
+}
+
+.login-box{
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+
+}
+.login-box h1{
+    float: left;
+    font-size: 40px;
+    border-bottom: 6px solid white;
+    margin-bottom: 10px;
+    padding: 13px 0;
+}
+
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 1px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid white;
+}
+
+.btn{
+    width: 100%;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    margin-bottom: 3px;
+}
+
+.btn:hover{
+    width: 100%;
+    background: black;
+    border: 2px white;
+    color: white;
+    margin-bottom: 3px;
+}
+
+.create{
+    width: 100%;
+    background: none;
+    border: 2px solid white;
+    color: white;
+}
+
+.create:hover{
+    width: 100%;
+    background: black;
+    border: white;
+    color: white;
+}
+
+.textbox i{
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color:white;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px
+}
