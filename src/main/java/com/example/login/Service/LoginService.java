@@ -1,29 +1,27 @@
 package com.example.login.Service;
 
+import com.example.login.DBManager.DBManager;
 import com.example.login.Model.User;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-public class cafeSystem {
-    static Connection connect;
-    public void setConnection() {
-        try {
-            connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/cafe", "August", "x");
-            System.out.println("Connection set");
-
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-    }
+public class LoginService {
+    DBManager system = new DBManager();
+     Connection connect = system.setConnection();
 
     public User tryLogin(String username, String password) {
         User u = null;
+
         try {
             PreparedStatement ps;
             String query = "SELECT * FROM customer where username = ? and password = ?";
             ps = connect.prepareStatement(query);
             ps.setString(1, username);
             ps.setString(2, password);
+
             //Resultset kører igennem databasen
             ResultSet rs = ps.executeQuery();
 
@@ -43,6 +41,7 @@ public class cafeSystem {
             ps.setString(1, name);
             ps.setString(2, pw);
             ps.executeUpdate();
+            System.out.println("User added");
 
         } catch (SQLException err) {
             System.out.println(err + "Could not add user");
@@ -50,6 +49,3 @@ public class cafeSystem {
 
     }
 }
-
-
-
